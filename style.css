@@ -1,0 +1,102 @@
+@import "reset.css";
+
+body {
+  font-family: "TheJamsil5Bold";
+  background: linear-gradient(to top, black, #292929);
+  height: 100dvh;
+  text-align: center;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+@keyframes headerChange {
+  0%,
+  100% {
+    background: black;
+    color: #a3dce4;
+  }
+  50% {
+    background: #d2eff2;
+    color: black;
+  }
+}
+
+header {
+  font-size: 3rem;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, black, #3b4f50);
+  color: #50dcff;
+  width: 100%;
+  font-weight: 700;
+  animation: headerChange 8s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#main_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+#main_grid div {
+  animation: fadeInScaleUp 0.8s ease-in-out;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+.title_text {
+  width: 28rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0bec12 50%, #50dcff 0) var(--_p, 100%) /
+    200% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: background-position 0.8s ease;
+  cursor: pointer;
+}
+
+.title_text:hover {
+  --_p: 0%;
+}
+
+.my_text {
+  margin-bottom: 2rem;
+  width: 28rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  background: transparent;
+  border-radius: 12px;
+  border: 2px solid #50dcff;
+  color: white;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.my_text:hover {
+  background-color: #50dcff;
+  color: black;
+  cursor: pointer;
+}
